@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پت آباد | فروشگاه آنلاین حیوانات خانگی</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Vazirmatn Font -->
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Vazirmatn', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#1a1f71', // رنگ آبی تیره
+                        secondary: '#ff6b00', // رنگ نارنجی
+                        accent: '#e11d48', // رنگ قرمز
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Vazirmatn', sans-serif; }
+        .bg-dark-blue { background-color: #141a46; }
+        .product-card:hover { box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.15); transform: translateY(-3px); transition: all 0.3s ease; }
+        /* Hide scrollbar for carousel */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Top Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="text-3xl font-bold text-primary flex items-center gap-2">
+                <i class="fa-solid fa-paw text-secondary"></i> petabad
+            </div>
+
+            <!-- Search Bar -->
+            <div class="hidden md:flex flex-1 mx-8 relative">
+                <input type="text" placeholder="جستجو در پت آباد..." class="w-full bg-gray-100 rounded-full py-2 px-4 outline-none focus:ring-2 focus:ring-primary/50">
+                <button class="absolute left-2 top-1.5 text-gray-400 hover:text-primary"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+            <!-- User Actions -->
+            <div class="flex items-center gap-4 text-sm font-medium">
+                <a href="#" class="flex items-center gap-2 hover:text-primary"><i class="fa-regular fa-user text-lg"></i> ورود | ثبت نام</a>
+                <a href="#" class="flex items-center gap-2 hover:text-primary"><i class="fa-solid fa-cart-shopping text-lg"></i> سبد خرید</a>
+            </div>
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav class="border-t border-gray-100">
+            <div class="container mx-auto px-4 py-2 flex items-center gap-6 text-sm text-gray-600 overflow-x-auto no-scrollbar">
+                <a href="#" class="hover:text-primary font-bold text-primary">صفحه اصلی</a>
+                <a href="#" class="hover:text-primary">فروشگاه</a>
+                <a href="#" class="hover:text-primary">دسته بندی ها</a>
+                <a href="#" class="hover:text-primary">برندها</a>
+                <a href="#" class="hover:text-primary">مجله پت آباد</a>
+                <a href="#" class="hover:text-primary">تماس با ما</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="container mx-auto px-4 mt-6">
+        <div class="relative rounded-2xl overflow-hidden h-[300px] md:h-[450px] shadow-lg">
+            <!-- تصویر پس زمینه سگ و گربه -->
+            <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?q=80&w=1200&auto=format&fit=crop" alt="Orijen" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-l from-black/70 via-black/40 to-transparent flex flex-col justify-center p-8 md:p-16 text-white">
+                <h1 class="text-2xl md:text-5xl font-bold mb-4 leading-tight">غذای طبیعی و باکیفیت<br>برای سگ و گربه</h1>
+                <p class="text-sm md:text-lg mb-6 text-gray-200">متنوع‌ترین محصولات اورگانیک را از ما بخواهید</p>
+                <a href="#" class="bg-accent text-white px-8 py-3 rounded-full w-max hover:bg-red-700 transition flex items-center gap-2 text-sm font-bold shadow-md">
+                    خرید و مشاهده محصولات <i class="fa-solid fa-chevron-left"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="container mx-auto px-4 mt-10">
+        <div class="flex justify-center gap-8 md:gap-16 overflow-x-auto no-scrollbar pb-4">
+            <!-- Item -->
+            <a href="#" class="flex flex-col items-center gap-3 group">
+                <div class="w-20 h-20 md:w-28 md:h-28 rounded-full bg-orange-50 border-2 border-orange-100 flex items-center justify-center group-hover:border-secondary transition shadow-sm overflow-hidden p-1">
+                    <img src="https://images.unsplash.com/photo-1552728089-57bdde30beb3?q=80&w=150&auto=format&fit=crop" alt="پرندگان" class="w-full h-full object-cover rounded-full group-hover:scale-110 transition duration-300">
+                </div>
+                <span class="text-sm font-bold text-gray-700">پرندگان</span>
+            </a>
+            <a href="#" class="flex flex-col items-center gap-3 group">
+                <div class="w-20 h-20 md:w-28 md:h-28 rounded-full bg-orange-50 border-2 border-orange-100 flex items-center justify-center group-hover:border-secondary transition shadow-sm overflow-hidden p-1">
+                    <img src="https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?q=80&w=150&auto=format&fit=crop" alt="آبزیان" class="w-full h-full object-cover rounded-full group-hover:scale-110 transition duration-300">
+                </div>
+                <span class="text-sm font-bold text-gray-700">آبزیان</span>
+            </a>
+            <a href="#" class="flex flex-col items-center gap-3 group">
+                <div class="w-20 h-20 md:w-28 md:h-28 rounded-full bg-orange-50 border-2 border-orange-100 flex items-center justify-center group-hover:border-secondary transition shadow-sm overflow-hidden p-1">
+                    <img src="https://images.unsplash.com/photo-1425082661705-1834bfd09dca?q=80&w=150&auto=format&fit=crop" alt="جوندگان" class="w-full h-full object-cover rounded-full group-hover:scale-110 transition duration-300">
+                </div>
+                <span class="text-sm font-bold text-gray-700">جوندگان</span>
+            </a>
+            <a href="#" class="flex flex-col items-center gap-3 group">
+                <div class="w-20 h-20 md:w-28 md:h-28 rounded-full bg-orange-50 border-2 border-orange-100 flex items-center justify-center group-hover:border-secondary transition shadow-sm overflow-hidden p-1">
+                    <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=150&auto=format&fit=crop" alt="گربه" class="w-full h-full object-cover rounded-full group-hover:scale-110 transition duration-300">
+                </div>
+                <span class="text-sm font-bold text-gray-700">گربه</span>
+            </a>
+            <a href="#" class="flex flex-col items-center gap-3 group">
+                <div class="w-20 h-20 md:w-28 md:h-28 rounded-full bg-orange-50 border-2 border-orange-100 flex items-center justify-center group-hover:border-secondary transition shadow-sm overflow-hidden p-1">
+                    <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?q=80&w=150&auto=format&fit=crop" alt="سگ" class="w-full h-full object-cover rounded-full group-hover:scale-110 transition duration-300">
+                </div>
+                <span class="text-sm font-bold text-gray-700">سگ</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Best Sellers (Dark Section) -->
+    <section class="bg-dark-blue mt-12 py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-2xl font-bold text-white">پت آباد</h2>
+                <a href="#" class="text-sm text-gray-300 hover:text-white flex items-center gap-1 transition">مشاهده همه محصولات <i class="fa-solid fa-chevron-left text-xs"></i></a>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6">
+                <!-- Product Card 1 -->
+                <div class="bg-white rounded-2xl p-4 product-card relative flex flex-col">
+                    <span class="absolute top-3 right-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full z-10">15%</span>
+                    <div class="h-40 md:h-48 rounded-xl overflow-hidden mb-4 bg-gray-50 flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1589924691995-400dc9ecc119?q=80&w=300&auto=format&fit=crop" alt="محصول" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                    </div>
+                    <h3 class="text-sm font-bold text-center mb-2 line-clamp-2 h-10">غذای خشک گربه بالغ با طعم مرغ</h3>
+                    <div class="mt-auto text-center">
+                        <div class="text-gray-400 line-through text-xs mb-1">۴۵۰,۰۰۰ تومان</div>
+                        <div class="text-accent font-bold mb-3 text-lg">۳۸۰,۰۰۰ تومان</div>
+                        <button class="w-full border-2 border-primary text-primary hover:bg-primary hover:text-white rounded-xl py-2 text-sm font-bold transition">افزودن به سبد</button>
+                    </div>
+                </div>
+                
+                <!-- Product Card 2 -->
+                <div class="bg-white rounded-2xl p-4 product-card relative flex flex-col">
+                    <div class="h-40 md:h-48 rounded-xl overflow-hidden mb-4 bg-gray-50 flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1541599540903-216a46ca1dc0?q=80&w=300&auto=format&fit=crop" alt="محصول" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                    </div>
+                    <h3 class="text-sm font-bold text-center mb-2 line-clamp-2 h-10">تشک خواب حیوانات خانگی سایز متوسط</h3>
+                    <div class="mt-auto text-center">
+                        <div class="text-accent font-bold mb-3 text-lg mt-6">۸۹۰,۰۰۰ تومان</div>
+                        <button class="w-full border-2 border-primary text-primary hover:bg-primary hover:text-white rounded-xl py-2 text-sm font-bold transition">افزودن به سبد</button>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="bg-white rounded-2xl p-4 product-card relative flex-col hidden md:flex">
+                    <span class="absolute top-3 right-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full z-10">10%</span>
+                    <div class="h-40 md:h-48 rounded-xl overflow-hidden mb-4 bg-gray-50 flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?q=80&w=300&auto=format&fit=crop" alt="محصول" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                    </div>
+                    <h3 class="text-sm font-bold text-center mb-2 line-clamp-2 h-10">قلاده و هارنس سگ ضد آب</h3>
+                    <div class="mt-auto text-center">
+                        <div class="text-gray-400 line-through text-xs mb-1">۲۵۰,۰۰۰ تومان</div>
+                        <div class="text-accent font-bold mb-3 text-lg">۲۲۵,۰۰۰ تومان</div>
+                        <button class="w-full border-2 border-primary text-primary hover:bg-primary hover:text-white rounded-xl py-2 text-sm font-bold transition">افزودن به سبد</button>
+                    </div>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="bg-white rounded-2xl p-4 product-card relative flex-col hidden lg:flex">
+                    <div class="h-40 md:h-48 rounded-xl overflow-hidden mb-4 bg-gray-50 flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80&w=300&auto=format&fit=crop" alt="محصول" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                    </div>
+                    <h3 class="text-sm font-bold text-center mb-2 line-clamp-2 h-10">اسپری خوشبو کننده و براق کننده مو</h3>
+                    <div class="mt-auto text-center">
+                        <div class="text-accent font-bold mb-3 text-lg mt-6">۱۵۰,۰۰۰ تومان</div>
+                        <button class="w-full border-2 border-primary text-primary hover:bg-primary hover:text-white rounded-xl py-2 text-sm font-bold transition">افزودن به سبد</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promo Banners (3 Cols) -->
+    <section class="container mx-auto px-4 mt-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <a href="#" class="rounded-2xl overflow-hidden relative h-48 group shadow-md">
+                <img src="https://images.unsplash.com/photo-1589924691995-400dc9ecc119?q=80&w=600&auto=format&fit=crop" alt="غذای سگ" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent p-6 flex flex-col justify-end">
+                    <h3 class="text-white font-bold text-xl mb-3">انواع غذای سگ و گربه</h3>
+                    <span class="bg-secondary text-white text-sm px-4 py-1.5 rounded-full w-max hover:bg-orange-600 transition">مشاهده و خرید</span>
+                </div>
+            </a>
+            <a href="#" class="rounded-2xl overflow-hidden relative h-48 group shadow-md">
+                <img src="https://images.unsplash.com/photo-1541599540903-216a46ca1dc0?q=80&w=600&auto=format&fit=crop" alt="تشک" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent p-6 flex flex-col justify-end">
+                    <h3 class="text-white font-bold text-xl mb-3">انواع تشک و کوسن</h3>
+                    <span class="bg-secondary text-white text-sm px-4 py-1.5 rounded-full w-max hover:bg-orange-600 transition">مشاهده و خرید</span>
+                </div>
+            </a>
+            <a href="#" class="rounded-2xl overflow-hidden relative h-48 group shadow-md">
+                <img src="https://images.unsplash.com/photo-1623387641168-d9803ddd3f35?q=80&w=600&auto=format&fit=crop" alt="دارو" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent p-6 flex flex-col justify-end">
+                    <h3 class="text-white font-bold text-xl mb-3">انواع دارو و مکمل</h3>
+                    <span class="bg-secondary text-white text-sm px-4 py-1.5 rounded-full w-max hover:bg-orange-600 transition">مشاهده و خرید</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Cat Products (Light Section) -->
+    <section class="container mx-auto px-4 mt-16">
+        <div class="flex justify-between items-center mb-8 border-b-2 border-gray-200 pb-3">
+            <h2 class="text-2xl font-bold text-gray-800">محصولات گربه</h2>
+            <a href="#" class="text-sm text-gray-500 hover:text-primary flex items-center gap-1 transition">مشاهده همه محصولات <i class="fa-solid fa-chevron-left text-xs"></i></a>
+        </div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6">
+            <!-- Product Card 1 -->
+            <div class="bg-white border border-gray-100 rounded-2xl p-4 product-card relative flex flex-col">
+                <span class="absolute top-3 right-3 bg-green-500 text-white text-[10px] font-bold px-2 py-1 rounded-full z-10">موجود</span>
+                <div class="h-40 md:h-48 rounded-xl overflow-hidden mb-4 bg-gray-50 flex items-center justify-center">
+                    <img src="https://images.unsplash.com/photo-1589924691995-400dc9ecc119?q=80&w=300&auto=format&fit=crop" alt="محصول" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                </div>
+                <h3 class="text-sm font-bold text-center mb-2 line-clamp-2 h-10">غذای خشک گربه بالغ با طعم ماهی</h3>
+                <div class="mt-auto text-center">
+                    <div class="text-gray-400 line-through text-xs mb-1">۶۵۰,۰۰۰ تومان</div>
+                    <div class="text-accent font-bold mb-3 text-lg">۶۱۰,۰۰۰ تومان</div>
+                    <button class="w-full border-2 border-primary text-primary hover:bg-primary hover:text-white rounded-xl py-2 text-sm font-bold transition">افزودن به سبد</button>
+                </div>
+            </div>
+            <!-- Product Card 2 -->
+            <div class="bg-white border border-gray-100 rounded-2xl p-4 product-card relative flex flex-col">
+                <span class="absolute top-3 right-3 bg-red-500 text-white text-[10px] font-bold px-2 py-1 rounded-full z-10">15%</span>
+                <div class="h-40 md:h-48 rounded-xl overflow-hidden mb-4 bg-gray-50 flex items-center justify-center">
+                    <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?q=80&w=300&auto=format&fit=crop" alt="محصول" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                </div>
+                <h3 class="text-sm font-bold text-center mb-2 line-clamp-2 h-10">برس و شانه مخصوص پاکسازی مو</h3>
+                <div class="mt-auto text-center">
+                    <div class="text-gray-400 line-through text-xs mb-1">۳۰۰,۰۰۰ تومان</div>
+                    <div class="text-accent font-bold mb-3 text-lg">۲۵۰,۰۰۰ تومان</div>
+                    <button class="w-full border-2 border-primary text-primary hover:bg-primary hover:text-white rounded-xl py-2 text-sm font-bold transition">افزودن به سبد</button>
+                </div>
+            </div>
+            <!-- Product Card 3 -->
+            <div class="bg-white border border-gray-100 rounded-2xl p-4 product-card relative flex-col hidden md:flex">
+                <div class="h-40 md:h-48 rounded-xl overflow-hidden mb-4 bg-gray-50 flex items-center justify-center">
+                    <img src="https://images.unsplash.com/photo-1545249390-6bdfa286032f?q=80&w=300&auto=format&fit=crop" alt="محصول" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                </div>
+                <h3 class="text-sm font-bold text-center mb-2 line-clamp-2 h-10">توپ و اسباب بازی گربه</h3>
+                <div class="mt-auto text-center">
+                    <div class="text-accent font-bold mb-3 text-lg mt-6">۱۸۰,۰۰۰ تومان</div>
+                    <button class="w-full border-2 border-primary text-primary hover:bg-primary hover:text-white rounded-xl py-2 text-sm font-bold transition">افزودن به سبد</button>
+                </div>
+            </div>
+             <!-- Product Card 4 -->
+             <div class="bg-white border border-gray-100 rounded-2xl p-4 product-card relative flex-col hidden lg:flex">
+                <div class="h-40 md:h-48 rounded-xl overflow-hidden mb-4 bg-gray-50 flex items-center justify-center">
+                    <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80&w=300&auto=format&fit=crop" alt="محصول" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                </div>
+                <h3 class="text-sm font-bold text-center mb-2 line-clamp-2 h-10">شامپو مخصوص گربه و بچه گربه</h3>
+                <div class="mt-auto text-center">
+                    <div class="text-accent font-bold mb-3 text-lg mt-6">۱۲۰,۰۰۰ تومان</div>
+                    <button class="w-full border-2 border-primary text-primary hover:bg-primary hover:text-white rounded-xl py-2 text-sm font-bold transition">افزودن به سبد</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands -->
+    <section class="container mx-auto px-4 mt-16 py-10 bg-white rounded-2xl shadow-sm border border-gray-100">
+        <div class="flex justify-between items-center mb-8 px-4">
+            <h2 class="text-xl font-bold text-gray-800">برندهای معتبر پت آباد</h2>
+        </div>
+        <div class="flex justify-center items-center gap-8 md:gap-16 flex-wrap opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition duration-500 px-4">
+            <!-- استفاده از لوگوهای واقعی برندها -->
+            <img src="https://logo.clearbit.com/whiskas.com" alt="Whiskas" class="h-10 md:h-14 object-contain">
+            <img src="https://logo.clearbit.com/josera.de" alt="Josera" class="h-10 md:h-14 object-contain">
+            <img src="https://logo.clearbit.com/beaphar.com" alt="Beaphar" class="h-10 md:h-14 object-contain">
+            <img src="https://logo.clearbit.com/gourmet.com" alt="Gourmet" class="h-10 md:h-14 object-contain">
+            <img src="https://logo.clearbit.com/kitcat.com.sg" alt="Kit Cat" class="h-10 md:h-14 object-contain">
+            <img src="https://logo.clearbit.com/uspetsupplies.com" alt="US Pet" class="h-10 md:h-14 object-contain">
+        </div>
+    </section>
+
+    <!-- Features (Footer Top) -->
+    <section class="container mx-auto px-4 mt-12 mb-16">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 text-center">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center gap-4 hover:shadow-md transition">
+                <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center text-primary text-3xl">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <span class="text-sm md:text-base font-bold text-gray-700">ضمانت اصالت کالا</span>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center gap-4 hover:shadow-md transition">
+                <div class="w-16 h-16 bg-orange-50 rounded-full flex items-center justify-center text-secondary text-3xl">
+                    <i class="fa-solid fa-truck-fast"></i>
+                </div>
+                <span class="text-sm md:text-base font-bold text-gray-700">ارسال سریع</span>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center gap-4 hover:shadow-md transition">
+                <div class="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center text-green-600 text-3xl">
+                    <i class="fa-solid fa-boxes-stacked"></i>
+                </div>
+                <span class="text-sm md:text-base font-bold text-gray-700">تنوع کالا</span>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center gap-4 hover:shadow-md transition">
+                <div class="w-16 h-16 bg-purple-50 rounded-full flex items-center justify-center text-purple-600 text-3xl">
+                    <i class="fa-solid fa-credit-card"></i>
+                </div>
+                <span class="text-sm md:text-base font-bold text-gray-700">پرداخت آسان</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 pt-12 pb-6">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <!-- Col 1: Logo & Contact -->
+            <div class="col-span-1">
+                <div class="text-3xl font-bold text-primary flex items-center gap-2 mb-6">
+                    <i class="fa-solid fa-paw text-secondary"></i> petabad
+                </div>
+                <p class="text-sm text-gray-500 mb-6 leading-relaxed">فروشگاه آنلاین محصولات حیوانات خانگی، ارائه دهنده بهترین برندهای جهانی با ضمانت اصالت کالا.</p>
+                <div class="text-sm text-gray-600 space-y-3">
+                    <p><i class="fa-solid fa-phone text-primary ml-2"></i> ۰۲۱-۱۲۳۴۵۶۷۸</p>
+                    <p><i class="fa-solid fa-envelope text-primary ml-2"></i> info@petabad.com</p>
+                </div>
+            </div>
+
+            <!-- Col 2: Quick Links -->
+            <div>
+                <h4 class="font-bold mb-6 text-gray-800 text-lg">دسترسی سریع</h4>
+                <ul class="space-y-3 text-sm text-gray-500">
+                    <li><a href="#" class="hover:text-primary transition">درباره ما</a></li>
+                    <li><a href="#" class="hover:text-primary transition">تماس با ما</a></li>
+                    <li><a href="#" class="hover:text-primary transition">سوالات متداول</a></li>
+                    <li><a href="#" class="hover:text-primary transition">قوانین و مقررات</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 3: Customer Service -->
+            <div>
+                <h4 class="font-bold mb-6 text-gray-800 text-lg">خدمات مشتریان</h4>
+                <ul class="space-y-3 text-sm text-gray-500">
+                    <li><a href="#" class="hover:text-primary transition">رویه ارسال سفارشات</a></li>
+                    <li><a href="#" class="hover:text-primary transition">شرایط بازگشت کالا</a></li>
+                    <li><a href="#" class="hover:text-primary transition">حریم خصوصی</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 4: Trust Badges -->
+            <div>
+                <h4 class="font-bold mb-6 text-gray-800 text-lg">ما را دنبال کنید</h4>
+                <div class="flex gap-4 mb-6">
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-500 hover:text-pink-600 hover:bg-pink-50 transition text-xl"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-500 hover:text-blue-600 hover:bg-blue-50 transition text-xl"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-500 hover:text-red-600 hover:bg-red-50 transition text-xl"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+                <div class="flex gap-4">
+                    <!-- نمادهای اعتماد فرضی -->
+                    <div class="w-20 h-20 border border-gray-200 rounded-lg flex items-center justify-center bg-gray-50 p-2">
+                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/E-namad_logo.svg/1200px-E-namad_logo.svg.png" alt="نماد اعتماد" class="max-w-full max-h-full opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition">
+                    </div>
+                    <div class="w-20 h-20 border border-gray-200 rounded-lg flex items-center justify-center bg-gray-50 p-2">
+                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/E-namad_logo.svg/1200px-E-namad_logo.svg.png" alt="نماد اعتماد" class="max-w-full max-h-full opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container mx-auto px-4 mt-12 pt-6 border-t border-gray-100 text-center text-xs text-gray-400">
+            تمامی حقوق این وب‌سایت متعلق به فروشگاه پت آباد می‌باشد. © ۱۴۰۳
+        </div>
+    </footer>
+
+</body>
+</html>
